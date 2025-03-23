@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="closckstyle.css">
+
+</head>
+
+
+<body>
+
+    <div class="containers">
+        <div class="left">
+
+
+
+            <div class="clock-container">
+                <div class="clock">
+                    <div class="needle hour"></div>
+                    <div class="needle minute"></div>
+                    <div class="needle second"></div>
+                    <div class="center-point"></div>
+                </div>
+
+                <div class="time"></div>
+                <div class="date"></div>
+
+
+                <script src="clockscript.js"></script>
+            </div>
+
+
+        </div>
+
+        <div class="right">
+
+            <div class="header">
+                <div class="s1 active-btn" id="b1">
+                    <button>Login/SignUp</button>
+                </div>
+                <div class="s2 active-btn" id="b2">
+                    <button>
+                       Dashboard
+                    </button>
+                </div>
+                <div class="s3 active-btn" id="b3">
+                    <button>
+                        AI Assistant
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="open">
+                <img
+                    src="https://img.freepik.com/premium-photo/smart-restaurants-with-aipowered-order-management-restaurants-where-ai-manages-orders-provides-personalized-menu-suggestions_1230253-22938.jpg" height="200px">
+                <h2>Welcome to Smart Menu Application...!</h2>
+                <p>Your AI-powered assistant for seamless and efficient menu browsing...</p>
+                <p>
+                    Please login or SignUp to Continue <span class="pop"> click top Left to login or signup</span>
+                </p>
+
+
+            </div>
+            <div class="login">
+                <img src="—Pngtree—profile glyph black icon_4008321.png" alt="profile">
+
+                <form>
+                    <input type="text" id="log" placeholder="Enter Your Username" required>
+
+                    <input type="password" id="logpass" placeholder="Enter password" required>
+
+                    <button type="submit" id="logbtn">Submit</button>
+
+                </form>
+                <a href="#" id="asignup">Click here Create a New Account</a>
+
+                <p id="logres" style="font-size: medium;margin-left: 36%;"> </p>
+            </div>
+
+
+
+            <div class="container" id="sign">
+
+
+
+                <div class="form-grp">
+                    <form>
+                        <div>
+
+                            <label for="fname"> Enter Firstname </label>
+                            <input type="text" id="fname" name="fname" required>
+                            <p id="checkf" style="color: red;"></p>
+                        </div>
+
+                        <div>
+                            <label for="lname"> Enter Lastname </label>
+                            <input type="text" id="lname" name="lname" required>
+                            <p id="checkl" style="color: red;"></p>
+                        </div>
+
+                        <div style="max-width: 100%;">
+                            <label for="uname" id="xu"> Enter Username </label>
+                            <input style="width: 41vw;margin-left: 12%;" type="text" id="uname" name="uname"
+                                required>
+                            <br>
+                            <pre>                       You can use letters, numbers & periods</pre>
+                            <p id="checku" style="color: red;margin-left: 12.5%;"></p>
+                        </div>
+
+
+                        <div>
+
+                            <label for="age"> Enter Age </label>
+                            <input type="number" id="age" name="age" required>
+                            <p id="checka" style="color: red;"></p>
+                        </div>
+
+                        <div>
+                            <label for="pincode"> Enter Pin Code</label>
+                            <input type="text" id="pincode" name="pincode" required>
+                            <p id="checkp" style="color: red;"></p>
+                        </div>
+                        <div>
+
+                            <label for="pass"> Password </label>
+                            <input type="password" id="pass" name="pass" required>
+                            <p id="checkpass" style="color: red;"></p>
+                        </div>
+
+                        <div>
+                            <label for="cpass"> Confirm password</label>
+                            <input type="password" id="cpass" name="cpass" required>
+                            <p id="checkcpass" style="color: red;"></p>
+                        </div>
+
+
+
+                        <button type="submit" id="checking">
+                            Submit
+                        </button>
+
+                        <p id="failed" style="color: red;min-width: 100%;margin-left: 60%;"></p>
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="step2">
+                <h2>Welcome, <span id="user-name">User</span>!</h2>
+                <p>Manage your profile and access your AI Assistant.</p>
+
+                <div class="step2-options">
+                    <button id="gotoAI">Go to AI Assistant</button>
+                    <button id="toggleSettings">Settings</button>
+                    <button id="logout">Logout</button>
+                </div>
+
+                
+                <div class="user-info">
+                    <h3>Your Profile</h3>
+                   
+                    <p><b>Name:</b> <span id="names"></span></p>
+                    <p><b>Email:</b> <span id="user-email"></span></p>
+                    <p><b>Age:</b> <span id="user-age"></span></p>
+                </div>
+
+                <div class="settings-panel" id="settingsPanel" style="display: none;">
+                    <h3>Update Your Details</h3>
+                    <label>New Password:</label>
+                    <input type="password" id="newPassword" placeholder="Enter new password">
+                    <button id="updatePassword">Update Password</button>
+                </div>
+            </div>
+
+
+            <div id="oks" style="display: none;padding: 20%;">
+                <p id="ok"></p>
+            </div>
+            <div id="chat-container">
+                <div id="chat-box"></div>
+
+                    <div class="send">
+                        <input type="text" id="user-input" placeholder="Ask me anything...">
+                        <button onclick="sendMessage()" id="send-button">Send</button>
+                    </div>    
+                  
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>
